@@ -1,0 +1,9 @@
+sudo docker start  a073481489f72a29db18542dacfe3ff1aecc2a6508a139223cd9c8365f3684c3
+
+npx sequelize migration:create --name=create-appointments
+npx sequelize db:migrate
+
+git status
+git add .
+git commit -m "commit"
+git push -u origin master
