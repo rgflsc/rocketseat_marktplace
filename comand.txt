@@ -29,6 +29,7 @@ yarn add joi
 yarn add express-validation
 yarn add express-async-handler
 yarn add youch
+yarn add dotenv
 ----------------------------------------------------------------------------------
 github
 
