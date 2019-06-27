@@ -1,22 +1,42 @@
-gobarber
+docker
+
+sudo docker ps -a --no-trunc
 
 postgress
+sudo docker run --name gobraber -p 5432:5432 -d -t kartoza/postgis
 sudo docker start a073481489f72a29db18542dacfe3ff1aecc2a6508a139223cd9c8365f3684c3
+
+mongo
+sudo docker run --name marketplace -p 27017:27017 -d -t mongo
+sudo docker start 5886fd7160e3fbeebeae56eaf3112b14411e895cf25b933a1922e97d274f5ae2
+
+redis
+sudo docker run --name noderedis -p 6379:6379 -d -t redis:alpine
+sudo docker start 6e7279d38010bfcc365c1f3e815664ca746017a6b7ad1277003b1831a7b558d4
+
+----------------------------------------------------------------------------------
+gobarber
 
 npx sequelize migration:create --name=create-appointments
 npx sequelize db:migrate
 
-----------------------------------
+----------------------------------------------------------------------------------
 marketplace
 
-mongo
-sudo docker start 5886fd7160e3fbeebeae56eaf3112b14411e895cf25b933a1922e97d274f5ae2
-
 yarn add mongoose
-----------------------------------
+yarn add kue
+yarn add joi
+yarn add express-validation
+yarn add express-async-handler
+yarn add youch
+----------------------------------------------------------------------------------
+github
+
 git status
 git add .
 git commit -m "commit"
 git push -u origin master
 
+----------------------------------------------------------------------------------
 npm install
+
